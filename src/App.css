@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin: 0;
+  background-color: rgba(50, 50, 50, 0.3);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-image: url("https://images.unsplash.com/photo-1625225233840-695456021cde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.calculator{
+  display: grid;
+  margin-top: 20%;
+  grid-template-columns: repeat(4, 9rem);
+  grid-template-rows: minmax(8rem, auto);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.span-two{
+  grid-column: span 2;
+}
+
+.display{
+  grid-column: 1 / -1;
+  background-color: rgba(50, 50, 50, 0.3);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: .5rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: .2rem  .2rem 0 0;
 }
 
-.App-link {
-  color: #61dafb;
+.display .output-display{
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display .input-display{
+  font-size: 2rem;
 }
+
+.calculator button{
+  border-radius: .2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 1px solid rgba(50, 50, 50, 0.3);
+  outline: none;
+  padding: 1rem;
+}
+
+.calculator button:hover{
+  background-color: rgba(50, 50, 50, 0.3);
+}
+
